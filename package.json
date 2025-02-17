@@ -1,0 +1,20 @@
+{
+  "name": "rgl-pugs-4-full",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "workspaces": [
+    "league-backend",
+    "league-frontend",
+    "league-shared"
+  ],
+  "scripts": {
+    "dev:frontend": "bun run --cwd league-frontend dev",
+    "dev:backend": "bun run --cwd league-backend dev",
+    "build:frontend": "bun run --cwd league-frontend build",
+    "build:backend": "bun run --cwd league-backend build",
+    "dev": "bun run dev:backend & bun run dev:frontend",
+    "build": "bun run build:backend & bun run build:frontend",
+    "preview": "bun run --cwd frontend preview & ./backend/app"
+  }
+}
