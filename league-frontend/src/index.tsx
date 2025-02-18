@@ -15,7 +15,7 @@ export function App() {
   return (
     <LocationProvider>
       <Header />
-      <main class="max-h-[calc((100vh)-var(--spacing)*22)] overflow-y-scroll overflow-x-hidden last:mb-3">
+      <main class="overflow-y-scroll last:mb-3">
         <Router>
           <Route path="/" component={Home} />
           <Route default component={NotFound} />

@@ -14,7 +14,11 @@
     "build:frontend": "bun run --cwd league-frontend build",
     "build:backend": "bun run --cwd league-backend build",
     "dev": "bun run dev:backend & bun run dev:frontend",
-    "build": "bun run build:backend & bun run build:frontend",
-    "preview": "bun run --cwd frontend preview & ./backend/app"
+    "build": "bun run build.ts",
+    "preview": "bun run --cwd frontend preview & ./backend/app",
+    "db:update": "cd league-backend && bun x drizzle-kit push"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.14.0"
   }
 }
